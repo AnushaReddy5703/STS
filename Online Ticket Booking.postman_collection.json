@@ -1,0 +1,681 @@
+{
+	"info": {
+		"_postman_id": "15d9cc98-389b-4ea0-80d9-e2bb8ad66a0b",
+		"name": "Online Ticket Booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36032377"
+	},
+	"item": [
+		{
+			"name": "Event",
+			"item": [
+				{
+					"name": "localhost:8080/events",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"eventId\": 6,\r\n        \"name\":  \"Concert\",\r\n        \"location\": \"Mall\",\r\n        \"dateTime\": \"30-06-2024 05:30 PM\",\r\n        \"ticketId\":15\r\n        \r\n        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/events",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/events",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"eventId\": 6,\r\n        \"name\":  \"Concert\",\r\n        \"location\": \"Mall\",\r\n        \"dateTime\": \"30-06-2024 05:30 PM\",\r\n        \"ticketId\":15\r\n        \r\n        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/events",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/events/5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"eventId\": 6,\r\n        \"name\":  \"Concert\",\r\n        \"location\": \"Mall\",\r\n        \"dateTime\": \"30-06-2024 05:30 PM\",\r\n        \"ticketId\":15\r\n        \r\n        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/events/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"events",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/events/5",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"eventId\": 5,\r\n        \"name\":  \"Conference\",\r\n        \"location\": \"In Orbit Mall\",\r\n        \"dateTime\": \"30-06-2024 05:30 PM\",\r\n        \"ticketId\":15\r\n        \r\n        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/events/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"events",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/events/5",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"eventId\": 5,\r\n        \"name\":  \"Conference\",\r\n        \"location\": \"In Orbit Mall\",\r\n        \"dateTime\": \"30-06-2024 05:30 PM\",\r\n        \"ticketId\":15\r\n        \r\n        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/events/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"events",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ticket",
+			"item": [
+				{
+					"name": "localhost:8050/tickets",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ticketId\":50,\r\n    \"eventId\":22,\r\n    \"userName\":\"AnushaReddy\",\r\n    \"seatNumber\":100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8050/tickets/50",
+							"host": [
+								"localhost"
+							],
+							"port": "8050",
+							"path": [
+								"tickets",
+								"50"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8050/users/601/ticket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"ticketId\": 599,\r\n        \"eventId\":  999,\r\n        \"userName\": \"Keerthi\",\r\n        \"seatNumber\": 99\r\n        \r\n        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8050/users/601/ticket",
+							"host": [
+								"localhost"
+							],
+							"port": "8050",
+							"path": [
+								"users",
+								"601",
+								"ticket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8050/tickets",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ticketId\":1111,\r\n    \"eventId\":111,\r\n    \"userName\":\"SrinivasReddy\",\r\n    \"seatNumber\":11\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8050/tickets",
+							"host": [
+								"localhost"
+							],
+							"port": "8050",
+							"path": [
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8050/tickets",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ticketId\":1111,\r\n    \"eventId\":111,\r\n    \"userName\":\"SrinivasReddy\",\r\n    \"seatNumber\":11\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8050/tickets",
+							"host": [
+								"localhost"
+							],
+							"port": "8050",
+							"path": [
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8050/tickets/50",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ticketId\":1111,\r\n    \"eventId\":111,\r\n    \"userName\":\"SrinivasReddy\",\r\n    \"seatNumber\":11\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8050/tickets/50",
+							"host": [
+								"localhost"
+							],
+							"port": "8050",
+							"path": [
+								"tickets",
+								"50"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8050/users/301/ticket",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"ticketId\": 599,\r\n        \"eventId\":  999,\r\n        \"userName\": \"Keerthi\",\r\n        \"seatNumber\": 99\r\n        \r\n        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8050/users/301/ticket",
+							"host": [
+								"localhost"
+							],
+							"port": "8050",
+							"path": [
+								"users",
+								"301",
+								"ticket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8050/users/301/ticket/4001",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"ticketId\": 599,\r\n        \"eventId\":  999,\r\n        \"userName\": \"Keerthi\",\r\n        \"seatNumber\": 99\r\n        \r\n        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8050/users/301/ticket/4001",
+							"host": [
+								"localhost"
+							],
+							"port": "8050",
+							"path": [
+								"users",
+								"301",
+								"ticket",
+								"4001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8050/users/301/ticket/4001",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"ticketId\": 599,\r\n        \"eventId\":  999,\r\n        \"userName\": \"Keerthi\",\r\n        \"seatNumber\": 99\r\n        \r\n        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8050/users/301/ticket/4001",
+							"host": [
+								"localhost"
+							],
+							"port": "8050",
+							"path": [
+								"users",
+								"301",
+								"ticket",
+								"4001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8050/users/301/ticket/4001",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"ticketId\": 599,\r\n        \"eventId\":  999,\r\n        \"userName\": \"Keerthi\",\r\n        \"seatNumber\": 99\r\n        \r\n        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8050/users/1111/ticket/96",
+							"host": [
+								"localhost"
+							],
+							"port": "8050",
+							"path": [
+								"users",
+								"1111",
+								"ticket",
+								"96"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "localhost:8060/users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":2222,\r\n    \"fullName\":\"anu\",\r\n    \"email\":\"anu@gmail.com\",\r\n    \"ticketId\":51,\r\n    \"eventId\":2\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8060/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8060",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8060/users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 10,\r\n        \"eventId\": \"500\",\r\n        \"userName\": \"Anusha\",\r\n        \"seatNumber\":95\r\n        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8060/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8060",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8060/users/1111",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":801,\r\n    \"fullName\":\"Priya Raga\",\r\n    \"email\":\"priya@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8060/users/1111",
+							"host": [
+								"localhost"
+							],
+							"port": "8060",
+							"path": [
+								"users",
+								"1111"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8060/users/801",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":801,\r\n    \"fullName\":\"Priya Raga\",\r\n    \"email\":\"priya@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8060/users/801",
+							"host": [
+								"localhost"
+							],
+							"port": "8060",
+							"path": [
+								"users",
+								"801"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8060/users/1000",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1000,\r\n    \"fullName\":\"dummy\",\r\n    \"email\":\"dummy@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8060/users/1000",
+							"host": [
+								"localhost"
+							],
+							"port": "8060",
+							"path": [
+								"users",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8060/users/page?pageNo=4&sortBy=userId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1000,\r\n    \"fullName\":\"dummy\",\r\n    \"email\":\"dummy@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8060/users/page?pageNo=4&sortBy=userId",
+							"host": [
+								"localhost"
+							],
+							"port": "8060",
+							"path": [
+								"users",
+								"page"
+							],
+							"query": [
+								{
+									"key": "pageNo",
+									"value": "4"
+								},
+								{
+									"key": "sortBy",
+									"value": "userId"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8060/users/search?query=Veera",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1000,\r\n    \"fullName\":\"dummy\",\r\n    \"email\":\"dummy@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8060/users/search?query=Veera",
+							"host": [
+								"localhost"
+							],
+							"port": "8060",
+							"path": [
+								"users",
+								"search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "Veera"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8060/users/user/901",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8060/users/user/901",
+							"host": [
+								"localhost"
+							],
+							"port": "8060",
+							"path": [
+								"users",
+								"user",
+								"901"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
