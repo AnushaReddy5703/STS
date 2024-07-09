@@ -36,57 +36,17 @@ public class UserServiceImpl implements UserService {
 	private RestTemplate restTemplate;
 	
 	public User fetchUser(Long userId) {
-//		UserTicket userTicket=restTemplate.getForObject("http://localhost:8050/ticketsdata/"+id, UserTicket.class);
-//		
-//		return userTicket.getUserTicket().stream().map(tickets->{
-//			Event event=restTemplate.getForObject("http://localhost:8080/events/"+tickets.getEventId(), Event.class);
-//			return new User(event.getId(),"",""); // fields in user, id fullname email
-//		}).collect(Collectors.toList());
+
 		
 		User user=userRepository.findById(userId).get(); // id ,fullname, email, ticketId, eventId
 		
-		Ticket ticket=restTemplate.getForObject("http://localhost:8050/tickets/"+user.getTicketId(),Ticket.class );
+		Ticket ticket=restTemplate.getForObject("http://ticketService/tickets/"+user.getTicketId(),Ticket.class );
 		user.setTicket(ticket);
 		
-		Event event=restTemplate.getForObject("http://localhost:8080/events/"+user.getEventId(), Event.class);
+		Event event=restTemplate.getForObject("http://eventService/events/"+user.getEventId(), Event.class);
 		user.setEvent(event);
 		
 		return user;
-		
-		
-//		User user = userRepository.findById(userId).get();
-//
-//        try {
-//            Ticket ticket = restTemplate.getForObject("http://localhost:8050/ticketsdata/"+user.getTicketId() , Ticket.class);
-//            user.setTicket(ticket);
-//        } catch (HttpClientErrorException ex) {
-//            // Handle HTTP client or server errors
-//            System.err.println("Error fetching ticket: " + ex.getMessage());
-//            // You might want to set the ticket to null or handle it differently
-//            user.setTicket(null);
-//        } catch (Exception ex) {
-//           // Handle other possible exceptions
-//           System.err.println("Unexpected error fetching ticket: " + ex.getMessage());
-//            user.setTicket(null);
-//        }
-//
-//        try {
-//            Event event = restTemplate.getForObject("http://localhost:8080/events/" + user.getEventId(), Event.class);
-//            user.setEvent(event);
-//        } catch (HttpClientErrorException ex) {
-//            // Handle HTTP client or server errors
-//            System.err.println("Error fetching event: " + ex.getMessage());
-//            // You might want to set the event to null or handle it differently
-//           user.setEvent(null);
-//        } catch (Exception ex) {
-//           // Handle other possible exceptions
-//           System.err.println("Unexpected error fetching event: " + ex.getMessage());
-//           user.setEvent(null);
-//        }
-//
-//        return user;
-    
-
 		
 	}
 	
